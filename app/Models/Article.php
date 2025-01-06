@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Department;
 class Article extends Model
 {
     use HasFactory;
@@ -24,8 +23,4 @@ class Article extends Model
         'articles_subject_en2',
         'articles_keyword'
     ];
-    public function departement()
-    {
-        return $this->belongsTo(Department::class,'departement_id','id');
-    }
 }

@@ -1,4 +1,3 @@
-{{-- {{Request::segment(1)}} --}}
 <style>
     /* @media only screen and (max-width:1025px) {
 
@@ -36,17 +35,13 @@
             margin: 30px;
         }
     }
-
 </style>
 <!doctype html>
-{{-- dir="ltr" --}}
-{{-- str_replace('_', '-', app()->getLocale()) --}}
 @if (app()->getLocale() == 'ar')
     <html lang="{{ app()->getLocale() }}" dir="rtl">
 @else
     <html lang="{{ app()->getLocale() }}" dir="ltl">
 @endif
-{{-- {{app()->getLocale()}} --}}
 
 <head>
     <meta charset="utf-8">
@@ -125,21 +120,17 @@
                             <a href="{{ route('users.sessions') }}" target="" class="nav-link"
                                 title="@lang('auth.buy_session')">@lang('auth.my_sessions')</a>
                         </li>
-                        <!--<li class="nav-item active">-->
-                        <!--    <a href="" target="" class="nav-link" title="@lang('auth.c_consulting')">@lang('auth.consulting')</a>-->
-                        <!--</li>-->
-
                         <li class="nav-item active"> <a href="https://www.facebook.com/Yatafakron/" target="_blank"
                                 title="@lang('auth.Yatafakron·Education')" class="nav-link">@lang('auth.about_us') </a> </li>
                         <li class="nav-item active"> <a href="{{ route('userCertificates') }}"
                                 title="@lang('auth.certificates')" class="nav-link"> @lang('auth.certificates') </a> </li>
-
                         <li class="nav-item active"> <a href="{{ route('videos') }}" target="" class="nav-link"
                                 title="@lang('auth.enjoy our videos now')">
                                 @lang('auth.Videos')</a> </li>
 
-
-
+                        <li class="nav-item active"> <a href="{{ route('returns') }}" target="" class="nav-link"
+                            title="@lang('auth.returns')">
+                            @lang('auth.returns')</a> </li>
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -188,27 +179,28 @@
                                         <a class="dropdown-item" href="{{ route('consults.index') }}">
                                             <strong> صفحة انواع الاستشارات</strong>
                                         </a>
-                                        <a class="dropdown-item" href="{{route('mainslider.index')}}">
+                                        <a class="dropdown-item" href="{{ route('mainslider.index') }}">
                                             <strong> معرض الصور الرئيسي</strong>
                                         </a>
 
-                                        <a class="dropdown-item" href="{{route('mainslider.create')}}">
+                                        <a class="dropdown-item" href="{{ route('mainslider.create') }}">
                                             <strong> معرض صور المؤلفات</strong>
                                         </a>
 
-                                        <a class="dropdown-item" href="{{route('mainslider.show',3)}}">
+                                        <a class="dropdown-item" href="{{ route('mainslider.show', 3) }}">
                                             <strong> معرض صور الكورسات</strong>
                                         </a>
 
-                                        <a class="dropdown-item" href="{{route('mainslider.show',4)}}">
+                                        <a class="dropdown-item" href="{{ route('mainslider.show', 4) }}">
                                             <strong> معرض صور اراء العملاء</strong>
                                         </a>
 
-                                        <a class="dropdown-item" href="{{route('mainslider.edit',5)}}">
+                                        <a class="dropdown-item" href="{{ route('mainslider.edit', 5) }}">
                                             <strong> صفحة الاعدادات</strong>
                                         </a>
                                     @endif
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault();
                                                                         document.getElementById('logout-form').submit();">
                                         <strong> {{ __('Logout') }} </strong>
                                     </a>
@@ -224,13 +216,13 @@
                         <li class="nav-item">
 
                             <div>
-                                <a  id="instagram1" target="_blank" title="instagram" style="text-decoration: none">
-                                <img src="{{ URL('images/moving/instagram.png') }}" style="height: 33px;">  |     </a>
+                                <a id="instagram1" target="_blank" title="instagram" style="text-decoration: none">
+                                    <img src="{{ URL('images/moving/instagram.png') }}" style="height: 33px;"> | </a>
                                 <a id="telegram1" target="_blank" title="Telegram" style="text-decoration: none">
-                                <img src="{{ URL('images/moving/telegram.png') }}" style="height: 33px;">  |
-                                 </a>
+                                    <img src="{{ URL('images/moving/telegram.png') }}" style="height: 33px;"> |
+                                </a>
                                 <a id="youtube1" target="_blank" title="you tube" style="text-decoration: none">
-                                    <img src="{{ URL('images/moving/youtube.png') }}" style="height: 33px;">  |
+                                    <img src="{{ URL('images/moving/youtube.png') }}" style="height: 33px;"> |
                                 </a>
                                 <a id="fb1" target="_blank" title="facebook" style="text-decoration: none">
                                     <img src="{{ URL('images/moving/facebook.png') }}" style="height: 33px;">
@@ -273,44 +265,37 @@
             @yield('content')
         </main>
     </div>
-    <script>
-        // console.log('done');
-        // document.getElementById('myaudio').autoplay = 'true';
-    </script>
-
 </body>
 <footer>
     <style>
         footer a {
             padding: 5px;
         }
-
     </style>
-    {{-- <div class="container"> --}}
     <hr>
     <div style="display: flex">
         <div class="two">
-
-            <a  id="instagram2" target="_blank" title="instagram" style="text-decoration: none">
-                <img src="{{ URL('images/moving/instagram.png') }}" style="height: 33px;">  |     </a>
-                <a id="telegram2" target="_blank" title="Telegram" style="text-decoration: none">
-                <img src="{{ URL('images/moving/telegram.png') }}" style="height: 33px;">  |
-                 </a>
-                <a id="youtube2" target="_blank" title="you tube" style="text-decoration: none">
-                    <img src="{{ URL('images/moving/youtube.png') }}" style="height: 33px;">  |
-                </a>
-                <a id="fb2" target="_blank" title="facebook" style="text-decoration: none">
-                    <img src="{{ URL('images/moving/facebook.png') }}" style="height: 33px;">
-                </a>
+            <a id="instagram2" target="_blank" title="instagram" style="text-decoration: none">
+                <img src="{{ URL('images/moving/instagram.png') }}" style="height: 33px;"> | </a>
+            <a id="telegram2" target="_blank" title="Telegram" style="text-decoration: none">
+                <img src="{{ URL('images/moving/telegram.png') }}" style="height: 33px;"> |
+            </a>
+            <a id="youtube2" target="_blank" title="you tube" style="text-decoration: none">
+                <img src="{{ URL('images/moving/youtube.png') }}" style="height: 33px;"> |
+            </a>
+            <a id="fb2" target="_blank" title="facebook" style="text-decoration: none">
+                <img src="{{ URL('images/moving/facebook.png') }}" style="height: 33px;">
+            </a>
             <p style="font-size: large;">@lang('auth.Follow us now to recieve all new')</p>
         </div>
 
         <div>
             <div>
                 {{-- href="https://api.whatsapp.com/send?phone=NUMBER
-                whatsapp.png--}}
-                <p style="text-align: center;margin-bottom: -4px;"> <a id="whatsapp"
-                        target="_blank" title="whatsapp"> <img src="{{ URL('images/moving/whatsapp.png') }}" style="height: 33px;">  </a> </p>
+                whatsapp.png --}}
+                <p style="text-align: center;margin-bottom: -4px;"> <a id="whatsapp" target="_blank"
+                        title="whatsapp"> <img src="{{ URL('images/moving/whatsapp.png') }}" style="height: 33px;">
+                    </a> </p>
                 <p style="font-size: large;">@lang('auth.contact_us')</p>
             </div>
         </div>
@@ -339,34 +324,33 @@
 
 <script>
     async function get() {
-        const response= await fetch('/api/settings');
+        const response = await fetch('/api/settings');
 
-   console.log('response');
-   //console.log(response.data);
-   //id="youtube2"
-   //id="telegram2"
-   //id="fb2" whatsapp
-   let setting=await response.json();
+        console.log('response');
+        //console.log(response.data);
+        //id="youtube2"
+        //id="telegram2"
+        //id="fb2" whatsapp
+        let setting = await response.json();
 
-   document.getElementById('instagram1').href=setting.setting_instgramurl;
-   document.getElementById('instagram2').href=setting.setting_instgramurl;
+        document.getElementById('instagram1').href = setting.setting_instgramurl;
+        document.getElementById('instagram2').href = setting.setting_instgramurl;
 
-   document.getElementById('youtube2').href=setting.setting_youtubeurl;
-   document.getElementById('youtube1').href=setting.setting_youtubeurl;
+        document.getElementById('youtube2').href = setting.setting_youtubeurl;
+        document.getElementById('youtube1').href = setting.setting_youtubeurl;
 
-   document.getElementById('telegram2').href=setting.setting_telegramurl;
-   document.getElementById('telegram1').href=setting.setting_telegramurl;
+        document.getElementById('telegram2').href = setting.setting_telegramurl;
+        document.getElementById('telegram1').href = setting.setting_telegramurl;
 
-   document.getElementById('fb2').href=setting.setting_facebookurl;
-   document.getElementById('fb1').href=setting.setting_facebookurl;
+        document.getElementById('fb2').href = setting.setting_facebookurl;
+        document.getElementById('fb1').href = setting.setting_facebookurl;
 
-   document.getElementById('whatsapp').href=setting.setting_whatsappurl;
+        document.getElementById('whatsapp').href = setting.setting_whatsappurl;
 
-   console.log(setting);
+        console.log(setting);
     }
 
     get();
-
 </script>
 
 </html>

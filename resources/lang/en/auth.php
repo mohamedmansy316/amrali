@@ -167,5 +167,6 @@ return [
      'paypal'=>'Buy via PayPal',
      'paymob_session'=>'Book via e-wallets or credit cards',
      'said'=>'customer reviews- testimonials',
+     'returns'=>'Returns',
 
 ];

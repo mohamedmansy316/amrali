@@ -65,6 +65,7 @@ Route::group([
     Route::get('/home', function () {
       return redirect(LaravelLocalization::localizeUrl('/'));
      });
+Route::view('/returns', 'static.returns')->name('returns');
   Route::get('/login',[LoginController::class,'showLoginForm']);
   Route::get('/register',[RegisterController::class,'showRegistrationForm']);
   //controller routes
